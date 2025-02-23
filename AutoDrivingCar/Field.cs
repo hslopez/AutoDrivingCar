@@ -9,13 +9,18 @@ namespace AutoDrivingCar
 {
     public class Field : IField
     {
-        public int Height => throw new NotImplementedException();
+        public int Width { get; }
+        public int Height { get; }
 
-        public int Width => throw new NotImplementedException();
+        public Field(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
 
         public bool IsPositionValid(int x, int y)
         {
-            throw new NotImplementedException();
+            return x >= 0 && x < Width && y >= 0 && y < Height;
         }
     }
 }
