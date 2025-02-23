@@ -79,6 +79,7 @@ graph TD
     F --> G[Detect Collisions]
     G --> H[Display Results]
     H --> I {Restart?}
+
 Code Structure
 Project Layout
 AutoDrivingCar/
@@ -109,6 +110,7 @@ Simulation
 Collision scenarios
 Multi-car interactions
 Command step execution
+
 Example Test
 [Test]
 public void ThreeCarCollision_AllRegisterImpact()
@@ -124,6 +126,7 @@ public void ThreeCarCollision_AllRegisterImpact()
     
     Assert.That(simulation.GetCars().All(c => c.Collision != null));
 }
+
 Readability & Maintenance
 Code Quality
 Naming Conventions
